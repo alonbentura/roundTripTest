@@ -13,15 +13,22 @@ export class DropDown extends React.Component {
 
   render() {
     const menuItem = _.get(this.props, 'data', []).map((d, index) => {
-      return <MenuItem value={d} key={index} >{d}</MenuItem>
+      return <MenuItem value={d} key={index} class={this.props.class} >{d}</MenuItem>
     })
+    const data = _.get(this.props, 'data', [])
     return (
-      <div style={this.props.style}>
-        <div>{this.props.label}</div>
-        <Select onChange={this.props.onSelect} name={this.props.name} >
+      <div style={this.props.style} class={this.props.class}>
+        <Select onChange={this.props.onChange} name={this.props.name} style={inputStyle} defaultValue={data[5]} >
           {menuItem}
         </Select>
       </div>
     )
   }
+}
+const inputStyle = {
+  width: '100%',
+  height: '100%',
+  borderBottom: 'none',
+  direction: 'rtl',
+  textAlign: 'right'
 }

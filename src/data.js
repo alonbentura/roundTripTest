@@ -16,7 +16,6 @@ export const data = [
 
     availability: "tomorrow",
     HostingBase: 'halfBoard',
-    summary: '7 לילות | חצי פנסיון | כולל העברות',
     img: 'https://www.rwsentosa.com/-/media/project/non-gaming/rwsentosa/hotels/hard-rock-hotel-singapore/hardrockhotelsg-exterior.jpg?mh=666&la=en&h=666&w=1366&mw=1366&hash=7890A13D2C4FE83769F4A571B997007215155027'
 
   },
@@ -36,7 +35,6 @@ export const data = [
     availability: "immediate",
     HostingBase: 'halfBoard',
     nights: 3,
-    summary: '7 לילות | חצי פנסיון | כולל העברות',
     img: 'https://k6u8v6y8.stackpathcdn.com/blog/wp-content/uploads/2014/05/Luxury-Hotels-in-India.jpg'
 
   },
@@ -57,7 +55,6 @@ export const data = [
 
     availability: "immediate",
     HostingBase: 'breakfast',
-    summary: '7 לילות | חצי פנסיון | כולל העברות',
     img: 'https://hmhub.me/wp-content/uploads/2018/07/Dhaka-Hotels.jpg'
   },
   {
@@ -77,7 +74,6 @@ export const data = [
 
     availability: "immediate",
     HostingBase: 'breakfast',
-    summary: '7 לילות | חצי פנסיון | כולל העברות',
     img: 'http://www.shangri-la.com/uploadedImages/Corporate/about-us/our-brands/SL-Our-Brand-Shangri-La-Hotels.jpg?width=720&height=283&mode=crop&quality=80'
   },
   {
@@ -96,7 +92,6 @@ export const data = [
     price: "1300",
     availability: "immediate",
     HostingBase: 'breakfast',
-    summary: '7 לילות | חצי פנסיון | כולל העברות',
     img: 'https://cdn.hotelplanner.com/Common/Images/_HotelPlanner/Home-Page/fade/sld6.jpg'
   }
 

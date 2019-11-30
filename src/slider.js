@@ -1,9 +1,9 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import Slider from '@material-ui/core/Slider';
-import Typography from '@material-ui/core/Typography';
 
-export default function CustomizedSlider() {
+
+export default function CustomizedSlider(props) {
   const RangeSlider = withStyles({
     root: {
       color: '#00aadf',
@@ -21,7 +21,12 @@ export default function CustomizedSlider() {
     },
     active: {},
     valueLabel: {
-      color: 'green',
+      top: 22,
+      '& *': {
+        background: 'transparent',
+        color: 'white',
+        fontWeight: 600
+      },
     },
     track: {
       height: 4,
@@ -34,7 +39,13 @@ export default function CustomizedSlider() {
     },
   })(Slider);
 
+  const rangeSorted = props.range.sort(function (a, b) {
+    return a - b;
+  });
+  let min = Number(rangeSorted[0])
+  let max = Number(rangeSorted[rangeSorted.length - 1])
+
   return (
-    <RangeSlider valueLabelDisplay="auto" defaultValue={[0, 20]} />
+    <RangeSlider valueLabelDisplay="on" max={max} min={min} defaultValue={[min, max]}  onChangeCommitted={props.onChangeRange} />
   );
 }

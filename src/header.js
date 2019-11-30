@@ -1,59 +1,48 @@
 import React from 'react'
-import Radio from '@material-ui/core/Radio';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Select from '@material-ui/core/Select'
-import { Checkbox } from '@material-ui/core';
 import { DropDown } from './assets/dropdown'
-import {StyledButton} from './assets/styled-button'
+import { StyledButton } from './assets/styled-button'
+import StyledCheckbox from './assets/checkbox'
+import StyledRadioBtn from './assets/radio'
 
 export class Header extends React.Component {
 
   renderRadioButtons() {
     return (
-      <div>
-        <Radio></Radio>
-        <Radio
-        ></Radio>
+      <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+        <StyledRadioBtn label="חבילות נופש" />
+        <StyledRadioBtn label="חבילות טוס וסע" />
       </div>
     )
   }
   renderInputs() {
     return (
-      <div style={styles.inputsContainer}>
+      <div class="row">
         <StyledButton style={styles.btn} label="חפש"></StyledButton>
-        <DropDown style={styles.smallInput} placeholder="חזרה" />
-        <DropDown style={styles.smallInput} placeholder="חזרה" />
-        <DropDown style={styles.smallInput} placeholder="חזרה" />
-        <Select label="יעד:" style={styles.bigInput} />
-        <Select label="סוג חבילה:" style={styles.bigInput} />
+        <DropDown style={styles.smallInput} label="חזרה" />
+        <DropDown style={styles.smallInput} label="חזרה" />
+        <DropDown style={styles.smallInput} label="חזרה" />
+        <DropDown style={styles.bigInput} label="יעד" />
+        <DropDown style={styles.bigInput} label="סוג החבילה" />
+
       </div >
     )
   }
   renderCheckBoxes() {
     return (
-      <div>
-        <FormControlLabel
-          control={
-            <Checkbox
-            />
-          }
+      <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+        <StyledCheckbox
           label="טיסות ישירות בלבד"
         />
-        <FormControlLabel
-          control={
-            <Checkbox
-            />
-          }
+        <StyledCheckbox
           label="חיפוש גמיש(+\- יום)"
         />
-
       </div>
     )
   }
 
   render() {
     return (
-      <div style={styles.container} class="row">
+      <div style={styles.container} class="col">
         {this.renderRadioButtons()}
         {this.renderInputs()}
         {this.renderCheckBoxes()}
@@ -70,30 +59,35 @@ const styles = {
   inputsContainer: {
     display: '  flex',
     flexFlow: 'row',
-    justifyContent: 'space-between',
     width: '100%'
   },
   bigInput: {
-    width: '20%',
     height: 50,
     border: 'solid 1px black',
     backgroundColor: 'white',
     borderRadios: 5,
     direction: 'rtl',
+    width: '25%',
+    marginLeft: "0.5%"
+
+
   },
   smallInput: {
-    width: '15%',
     height: 50,
     border: 'solid 1px black',
     backgroundColor: 'white',
-    borderRadios: 5
+    borderRadios: 5,
+    direction: 'rtl',
+    width: '13%',
+    marginLeft: "0.5%"
+
   },
   btn: {
     backgroundColor: '#7dcd24',
     color: 'white',
-    width: 150,
     height: 50,
-    fontSize: 25,
-    fontWeight: 600
+    fontSize: '14px',
+    fontWeight: 600,
+    width: '7%'
   }
 }

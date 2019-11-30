@@ -48,9 +48,9 @@ const useStyles = makeStyles({
 });
 
 export default function StyledCheckbox(props) {
-  const classes = useStyles();
+  const classes = useStyles(props);
   return (
-    <div style={{ display: 'flex', alignItems: 'center' }}>
+    <div style={{ display: 'flex', alignItems: 'center', color: 'white', fontSize: 14 }}>
       {props.label}
       <Checkbox
         name={props.name}
